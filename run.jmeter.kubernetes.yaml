@@ -52,7 +52,7 @@ variables:
   pass: pass
   repoBaseURL: https://$(user):$(pass)@github.com/ObjectivityLtd
   repoURL: $(repoBaseURL)/$(repoName)
-  scenario: $(repoName)/path/to/jmeter/script/test.jmx
+  scenario: $(repoName)/path/to/jmeter/script/bing.jmx
 
 jobs:
   - template: pipelines/azure/templates/run.mode.selector.yaml@crux
