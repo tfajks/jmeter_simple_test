@@ -33,6 +33,10 @@ parameters:
   default: jmeter_simple_test
   type: string
 
+- name: jmx
+  default: path/to/jmeter/script/bing.jmx
+  type: string
+
 - name: jmeter_args
   default: "-Gthreads=1 -Gloops=1"
   type: string
@@ -52,7 +56,7 @@ variables:
   pass: pass
   repoBaseURL: https://$(user):$(pass)@github.com/ObjectivityLtd
   repoURL: $(repoBaseURL)/$(repoName)
-  scenario: $(repoName)/path/to/jmeter/script/bing.jmx
+  scenario: $(repoName)/${{ parameters.jmx }}
 
 jobs:
   - template: pipelines/azure/templates/run.mode.selector.yaml@crux
