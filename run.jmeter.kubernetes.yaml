@@ -3,6 +3,12 @@
 
 name: $(BuildID)
 trigger: none
+resources:
+  repositories:
+    - repository: crux
+      type: github
+      name: ObjectivityLtd/jmeter_azure_k8_boilerplate
+
 parameters:
 - name: debug
   type: boolean
@@ -48,7 +54,7 @@ variables:
   scenario: $(repoName)/path/to/jmeter/script/test.jmx
 
 jobs:
-  - template: templates/run.mode.selector.yaml
+  - template: templates/run.mode.selector.yaml@crux
     parameters:
       mode: ${{ parameters.mode }}
       debug: ${{ parameters.debug }}
