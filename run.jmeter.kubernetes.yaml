@@ -59,3 +59,4 @@ jobs:
     parameters:
       mode: ${{ parameters.mode }}
       debug: ${{ parameters.debug }}
+      crux_download: true
