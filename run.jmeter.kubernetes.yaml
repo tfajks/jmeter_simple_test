@@ -55,6 +55,9 @@ variables:
   scenario: $(repoName)/path/to/jmeter/script/test.jmx
 
 jobs:
+  - job: checkout crux
+    steps:
+      - checkout: crux
   - template: pipelines/azure/templates/run.mode.selector.yaml@crux
     parameters:
       mode: ${{ parameters.mode }}
