@@ -63,4 +63,3 @@ jobs:
     parameters:
       mode: ${{ parameters.mode }}
       debug: ${{ parameters.debug }}
-      download_crux: true
