@@ -25,7 +25,7 @@
           </elementProp>
           <elementProp name="timer" elementType="Argument">
             <stringProp name="Argument.name">timer</stringProp>
-            <stringProp name="Argument.value">${__P(timer,20)}</stringProp>
+            <stringProp name="Argument.value">${__P(timer,200)}</stringProp>
             <stringProp name="Argument.metadata">=</stringProp>
           </elementProp>
         </collectionProp>
