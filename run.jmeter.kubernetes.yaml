@@ -7,12 +7,12 @@ resources:
   repositories:
     - repository: crux
       type: github
-      name: ObjectivityLtd/${{ variables.cruxRepoName }}
+      name: ObjectivityLtd/jmeter_azure_k8_boilerplate
       endpoint: crux
 
-    - repository: tests
+    - repository: jmeter_simple_test
       type: github
-      name: ObjectivityLtd/${{ variables.repoName }}
+      name: ObjectivityLtd/jmeter_simple_test
       endpoint: crux
 
 
