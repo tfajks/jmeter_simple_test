@@ -27,6 +27,7 @@ parameters:
     - tests
     - jmeter
 - name: data_file
+  type: string
   default: path/to/jmeter/test_data/sample_data.csv
   values:
     - path/to/jmeter/test_data/sample_data.csv
