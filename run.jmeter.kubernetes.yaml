@@ -8,7 +8,7 @@ resources:
     - repository: crux
       type: github
       name: ObjectivityLtd/crux
-      ref: refs/tags/0.2
+      ref: refs/tags/0.3
       endpoint: crux
 
     - repository: tests
