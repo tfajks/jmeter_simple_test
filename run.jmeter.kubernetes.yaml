@@ -10,7 +10,7 @@ resources:
       name: ObjectivityLtd/jmeter_azure_k8_boilerplate
       endpoint: crux
 
-    - repository: jmeter_simple_test
+    - repository: tests
       type: github
       name: ObjectivityLtd/jmeter_simple_test
       endpoint: crux
@@ -37,10 +37,6 @@ parameters:
   default: 1
   type: number
 
-- name: repo_name
-  default: jmeter_simple_test
-  type: string
-
 - name: jmx
   default: path/to/jmeter/script/bing.jmx
   type: string
@@ -59,12 +55,8 @@ variables:
   scale_up_replicas: ${{ parameters.jmeter_slaves }}
   data_file: ${{ parameters.data_file }}
   jmeter_args: ${{ parameters.jmeter_args }}
-  repoName: ${{ parameters.repo_name }}
+  repoName: jmeter_simple_test
   cruxRepoName: jmeter_azure_k8_boilerplate
-  user: user
-  pass: pass
-  repoBaseURL: https://$(user):$(pass)@github.com/ObjectivityLtd
-  repoURL: $(repoBaseURL)/$(repoName)
   scenario: $(repoName)/${{ parameters.jmx }}
 
 jobs:
