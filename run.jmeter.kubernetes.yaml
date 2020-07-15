@@ -7,12 +7,12 @@ resources:
   repositories:
     - repository: crux
       type: github
-      name: ObjectivityLtd/jmeter_azure_k8_boilerplate
+      name: ObjectivityLtd/$(cruxRepoName)
       endpoint: crux
 
     - repository: tests
       type: github
-      name: ObjectivityLtd/jmeter_simple_test
+      name: ObjectivityLtd/$(repoName)
       endpoint: crux
 
 
@@ -60,6 +60,7 @@ variables:
   data_file: ${{ parameters.data_file }}
   jmeter_args: ${{ parameters.jmeter_args }}
   repoName: ${{ parameters.repo_name }}
+  cruxRepoName: jmeter_azure_k8_boilerplate
   user: user
   pass: pass
   repoBaseURL: https://$(user):$(pass)@github.com/ObjectivityLtd
