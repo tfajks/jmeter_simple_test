@@ -11,9 +11,9 @@ resources:
       endpoint: crux
 
     - repository: tests
-        type: github
-        name: ObjectivityLtd/jmeter_simple_test
-        endpoint: crux
+      type: github
+      name: ObjectivityLtd/jmeter_simple_test
+      endpoint: crux
 
 
 parameters:
