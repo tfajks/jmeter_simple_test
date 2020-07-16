@@ -62,6 +62,7 @@ variables:
   repoName: jmeter_simple_test
   cruxRepoName: crux
   scenario: $(repoName)/${{ parameters.jmx }}
+  crux_clone: false
 
 jobs:
   - template: pipelines/azure/templates/run.mode.selector.yaml@crux
