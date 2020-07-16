@@ -65,8 +65,6 @@ variables:
 
 jobs:
   - template: pipelines/azure/templates/run.mode.selector.yaml@crux
-    variables:
-      - template: pipelines/azure/templates/off.variables.yaml@crux
     parameters:
       mode: ${{ parameters.mode }}
       debug: ${{ parameters.debug }}
