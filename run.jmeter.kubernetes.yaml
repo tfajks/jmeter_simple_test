@@ -15,7 +15,8 @@ resources:
     - repository: tests
       type: github
       name: ObjectivityLtd/jmeter_simple_test
-      ref: refs/tags/0.3.1
+      #ref: refs/tags/0.3.1
+      ref: refs/heads/feature/on_off_pipeline_steps
       endpoint: crux
 
 
@@ -27,6 +28,7 @@ parameters:
 - name: mode
   default: jmeter
   values:
+    - dummy
     - tests
     - jmeter
 - name: data_file
