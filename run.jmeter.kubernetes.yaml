@@ -28,7 +28,6 @@ parameters:
 - name: mode
   default: jmeter
   values:
-    - dummy
     - tests
     - jmeter
 - name: data_file
