@@ -64,6 +64,8 @@ variables:
   scenario: $(repoName)/${{ parameters.jmx }}
 
 jobs:
+  - variables:
+      - template: pipelines/azure/templates/off.variables.yaml@crux
   - template: pipelines/azure/templates/run.mode.selector.yaml@crux
     parameters:
       mode: ${{ parameters.mode }}
