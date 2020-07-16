@@ -9,7 +9,7 @@ resources:
       type: github
       name: ObjectivityLtd/crux
       #ref: refs/tags/0.3.1
-      ref: refs/branches/feature/on_off_pipeline_steps
+      ref: refs/heads/feature/on_off_pipeline_steps
       endpoint: crux
 
     - repository: tests
