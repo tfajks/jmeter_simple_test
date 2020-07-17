@@ -45,6 +45,10 @@ parameters:
   default: path/to/jmeter/script/bing.jmx
   type: string
 
+- name: thresholds
+  default: path/to/jmeter/config/thresholds.properties
+  type: string
+
 - name: jmeter_args
   default: "-Gthreads=1 -Gloops=1"
   type: string
@@ -58,6 +62,7 @@ variables:
   kubernetesServiceConnection: ${{ parameters.connection }}
   scale_up_replicas: ${{ parameters.jmeter_slaves }}
   data_file: ${{ parameters.data_file }}
+  thresholds_file: ${{ parameters.thresholds_file }}
   jmeter_args: ${{ parameters.jmeter_args }}
   repoName: jmeter_simple_test
   cruxRepoName: crux
