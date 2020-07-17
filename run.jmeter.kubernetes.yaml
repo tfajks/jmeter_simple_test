@@ -45,7 +45,7 @@ parameters:
   default: path/to/jmeter/script/bing.jmx
   type: string
 
-- name: thresholds
+- name: thresholds_file
   default: path/to/jmeter/config/thresholds.properties
   type: string
 
