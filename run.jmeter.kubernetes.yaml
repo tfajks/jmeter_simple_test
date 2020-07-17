@@ -62,7 +62,7 @@ variables:
   kubernetesServiceConnection: ${{ parameters.connection }}
   scale_up_replicas: ${{ parameters.jmeter_slaves }}
   data_file: ${{ parameters.data_file }}
-  thresholds_file: ${{ parameters.thresholds_file }}
+  thresholds_file: $(repoName)/${{ parameters.thresholds_file }}
   jmeter_args: ${{ parameters.jmeter_args }}
   repoName: jmeter_simple_test
   cruxRepoName: crux
