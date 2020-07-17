@@ -8,8 +8,8 @@ resources:
     - repository: crux
       type: github
       name: ObjectivityLtd/crux
-      ref: refs/tags/0.3.2
-      #ref: refs/heads/feature/on_off_pipeline_steps
+      #ref: refs/tags/0.3.2
+      ref: refs/heads/feature/junit_percentile_thresholds
       endpoint: crux
 
     - repository: tests
