@@ -49,6 +49,7 @@
             <stringProp name="Argument.name">sts</stringProp>
             <stringProp name="Argument.value">${__P(sts,${__machineIP})}</stringProp>
             <stringProp name="Argument.metadata">=</stringProp>
+            <stringProp name="Argument.desc">STS server is available on CRUX on jmeter master</stringProp>
           </elementProp>
           <elementProp name="csv" elementType="Argument">
             <stringProp name="Argument.name">csv</stringProp>
@@ -62,6 +63,7 @@
         <stringProp name="HttpSimpleTableControlGui.port">9191</stringProp>
         <boolProp name="HttpSimpleTableControlGui.timestamp">true</boolProp>
         <stringProp name="HttpSimpleTableControlGui.dir">C:\Users\gstarczewski\repos\performance\jmeter_simple_test\path\to\jmeter\test_data</stringProp>
+        <stringProp name="TestPlan.comments">Use this for local development</stringProp>
       </org.jmeterplugins.protocol.http.control.HttpSimpleTableControl>
       <hashTree/>
       <SetupThreadGroup guiclass="SetupThreadGroupGui" testclass="SetupThreadGroup" testname="setUp Thread Group" enabled="true">
