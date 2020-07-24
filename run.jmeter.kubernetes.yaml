@@ -67,7 +67,7 @@ variables:
   repoName: jmeter_simple_test
   cruxRepoName: crux
   scenario: $(repoName)/${{ parameters.jmx }}
-  #for mode with dynamic resource creation
+  #for mode with dynamic resource creation all the below must be set
   armServiceConnection: mygroup
   clusterNodeSize: Standard_D2_v2
   clusterNodeNumber: 2
@@ -76,6 +76,7 @@ variables:
   devOpsPatUser: gstarczewski
   devOpsPat: $(pat)
   rgroup: jmeter-group
+  namespace: default
 
 jobs:
   - template: pipelines/azure/templates/run.mode.selector.yaml@crux
