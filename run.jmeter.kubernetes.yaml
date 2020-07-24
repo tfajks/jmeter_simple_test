@@ -8,8 +8,8 @@ resources:
     - repository: crux
       type: github
       name: ObjectivityLtd/crux
-      ref: refs/tags/0.3.3
-      #ref: refs/heads/feature/junit_percentile_thresholds
+      #ref: refs/tags/0.3.3
+      ref: refs/heads/feature/arm
       endpoint: crux
 
     - repository: tests
