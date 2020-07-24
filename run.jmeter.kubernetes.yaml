@@ -30,6 +30,7 @@ parameters:
   values:
     - tests
     - jmeter
+    - jmeter_dynamic
 - name: data_file
   type: string
   default: path/to/jmeter/test_data/sample_data.csv
@@ -66,6 +67,14 @@ variables:
   repoName: jmeter_simple_test
   cruxRepoName: crux
   scenario: $(repoName)/${{ parameters.jmx }}
+  #for mode with dynamic resource creation
+  armServiceConnection: mygroup
+  clusterNodeSize: Standard_D2_v2
+  clusterNodeNumber: 2
+  devOpsOrg: gstarczewski
+  devOpsProject: jmeter
+  devOpsPatUser: gstarczewski
+  devOpsPat: $(pat)
 
 jobs:
   - template: pipelines/azure/templates/run.mode.selector.yaml@crux
