@@ -9,7 +9,7 @@ resources:
       type: github
       name: ObjectivityLtd/crux
       #ref: refs/tags/0.3.3
-      ref: refs/heads/feature/arm
+      #ref: refs/heads/feature/arm
       endpoint: crux
 
     - repository: tests
