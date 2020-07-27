@@ -53,14 +53,18 @@ parameters:
   default: "-Gthreads=1 -Gloops=1"
   type: string
 
-- name: connection
-  default: k8con2
+- name: kubernetes_service_connection
+  default: k8
+  type: string
+
+- name: arm_service_connection
+  default: mygroup
   type: string
 
 variables:
   #test execution environment & config
   cluster_namespace: default
-  kubernetesServiceConnection: ${{ parameters.connection }}
+  kubernetesServiceConnection: ${{ parameters.kubernetes_service_connection }}
   scale_up_replicas: ${{ parameters.jmeter_slaves }}
   data_file: $(repoName)/${{ parameters.data_file }}
   thresholds_file: $(repoName)/${{ parameters.thresholds_file }}
@@ -70,7 +74,7 @@ variables:
   scenario: $(repoName)/${{ parameters.jmx }}
 
   #parameters of cluster if to be created (jmeter_dynamic)
-  armServiceConnection: mygroup
+  armServiceConnection: ${{ parameters.arm_service_connection }}
   clusterNodeSize: Standard_D2_v2
   clusterNodeNumber: 2
   rgroup: jmeter-group
