@@ -9,14 +9,14 @@ resources:
       type: github
       name: ObjectivityLtd/crux
       #ref: refs/tags/0.3.4
-      #ref: refs/heads/feature/arm
+      ref: refs/heads/feature/quality
       endpoint: crux
 
     - repository: tests
       type: github
       name: ObjectivityLtd/jmeter_simple_test
       #ref: refs/tags/0.3.2
-      #ref: refs/heads/feature/on_off_pipeline_steps
+      ref: refs/heads/feature/quality
       endpoint: crux
 
 
