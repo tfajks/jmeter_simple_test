@@ -37,6 +37,10 @@ parameters:
   values:
     - path/to/jmeter/test_data/sample_data.csv
 
+- name: data_dir
+  type: string
+  default: path/to/jmeter/test_data
+
 - name: jmeter_slaves
   default: 1
   type: number
