@@ -9,14 +9,14 @@ resources:
       type: github
       name: ObjectivityLtd/crux
       #ref: refs/tags/0.3.4
-      #ref: refs/heads/feature/arm
+      ref: refs/heads/feature/quality
       endpoint: crux
 
     - repository: tests
       type: github
       name: ObjectivityLtd/jmeter_simple_test
       #ref: refs/tags/0.3.2
-      #ref: refs/heads/feature/on_off_pipeline_steps
+      ref: refs/heads/feature/quality
       endpoint: crux
 
 
@@ -31,11 +31,10 @@ parameters:
     - tests
     - jmeter
     - jmeter_dynamic
-- name: data_file
+
+- name: data_dir
   type: string
-  default: path/to/jmeter/test_data/sample_data.csv
-  values:
-    - path/to/jmeter/test_data/sample_data.csv
+  default: path/to/jmeter/test_data
 
 - name: jmeter_slaves
   default: 1
@@ -50,7 +49,7 @@ parameters:
   type: string
 
 - name: jmeter_args
-  default: "-Gthreads=1 -Gloops=1"
+  default: "-Gthreads=1 -Gloops=1 -Gtest_dir=/test"
   type: string
 
 - name: kubernetes_service_connection
@@ -66,7 +65,8 @@ variables:
   cluster_namespace: default
   kubernetesServiceConnection: ${{ parameters.kubernetes_service_connection }}
   scale_up_replicas: ${{ parameters.jmeter_slaves }}
-  data_file: $(repoName)/${{ parameters.data_file }}
+  data_dir: $(repoName)/${{ parameters.data_dir }}
+  data_dir_relative: ${{ parameters.data_dir }}
   thresholds_file: $(repoName)/${{ parameters.thresholds_file }}
   jmeter_args: ${{ parameters.jmeter_args }}
   repoName: jmeter_simple_test
