@@ -17,6 +17,7 @@ resources:
       name: ObjectivityLtd/jmeter_simple_test
       #ref: refs/tags/0.3.2
       #ref: refs/heads/feature/quality
+      ref: refs/tags/0.4.0
       endpoint: crux
 
 
