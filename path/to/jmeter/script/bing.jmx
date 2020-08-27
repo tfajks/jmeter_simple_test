@@ -58,7 +58,7 @@
           </elementProp>
           <elementProp name="data_dir" elementType="Argument">
             <stringProp name="Argument.name">data_dir</stringProp>
-            <stringProp name="Argument.value">${__P(test_dir,C:\Users\gstarczewski\repos\performance\jmeter_simple_test\path\to\jmeter\test_data)}</stringProp>
+            <stringProp name="Argument.value">${__P(data_dir,C:\Users\gstarczewski\repos\performance\jmeter_simple_test\path\to\jmeter\test_data)}</stringProp>
             <stringProp name="Argument.desc">/test</stringProp>
             <stringProp name="Argument.metadata">=</stringProp>
           </elementProp>
