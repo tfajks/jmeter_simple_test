@@ -50,7 +50,7 @@ parameters:
   type: string
 
 - name: jmeter_args
-  default: "-Gthreads=1 -Gloops=1 -Gtest_dir=/test"
+  default: "-Gthreads=1 -Gloops=1 -Gdata_dir=/shared"
   type: string
 
 - name: kubernetes_service_connection
