@@ -8,16 +8,16 @@ resources:
     - repository: crux
       type: github
       name: ObjectivityLtd/crux
-      ref: refs/tags/0.4.0
-      #ref: refs/heads/feature/quality
+      #ref: refs/tags/0.4.0
+      ref: refs/heads/feature/disks
       endpoint: crux
 
     - repository: tests
       type: github
       name: ObjectivityLtd/jmeter_simple_test
       #ref: refs/tags/0.3.2
-      #ref: refs/heads/feature/quality
-      ref: refs/tags/0.4.0
+      ref: refs/heads/feature/disks
+      #ref: refs/tags/0.4.0
       endpoint: crux
 
 
@@ -50,7 +50,7 @@ parameters:
   type: string
 
 - name: jmeter_args
-  default: "-Gthreads=1 -Gloops=1 -Gtest_dir=/test"
+  default: "-Gthreads=1 -Gloops=1 -Gdata_dir=/shared"
   type: string
 
 - name: kubernetes_service_connection
