@@ -16,7 +16,7 @@ resources:
       type: github
       name: ObjectivityLtd/jmeter_simple_test
       #ref: refs/tags/0.3.2
-      ref: refs/heads/feature/disks
+      #ref: refs/heads/feature/disks
       #ref: refs/tags/0.4.0
       endpoint: crux
 
