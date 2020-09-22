@@ -69,6 +69,7 @@ variables:
   data_dir: $(repoName)/${{ parameters.data_dir }}
   data_dir_relative: ${{ parameters.data_dir }}
   thresholds_file: $(repoName)/${{ parameters.thresholds_file }}
+  workbooks_file: $(repoName)/path/to/jmeter/config/workbooks.properties
   jmeter_args: ${{ parameters.jmeter_args }}
   repoName: jmeter_simple_test
   cruxRepoName: crux
