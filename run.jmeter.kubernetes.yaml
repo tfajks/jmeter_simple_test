@@ -2,22 +2,26 @@
 # Remember to have 1-1 jmeter service to k8 node (VM)/pod ratio - otherwsie some slaves can crash due to lack of resources
 
 name: $(BuildID)
-trigger: none
+trigger:
+  batch: 'true'
+  branches:
+    include:
+      - '*'
 resources:
   repositories:
     - repository: crux
       type: github
       name: ObjectivityLtd/crux
       #ref: refs/tags/0.4.0
-      #ref: refs/heads/feature/disks
+      #ref: refs/heads/feature/workbooks
       endpoint: crux
 
     - repository: tests
       type: github
       name: ObjectivityLtd/jmeter_simple_test
       #ref: refs/tags/0.3.2
-      #ref: refs/heads/feature/disks
-      #ref: refs/tags/0.4.0
+      #ref: refs/heads/feature/workbooks
+      #ref: refs/tags/0.4.1
       endpoint: crux
 
 
@@ -45,10 +49,6 @@ parameters:
   default: path/to/jmeter/script/bing.jmx
   type: string
 
-- name: thresholds_file
-  default: path/to/jmeter/config/thresholds.properties
-  type: string
-
 - name: jmeter_args
   default: "-Gthreads=1 -Gloops=1 -Gdata_dir=/shared"
   type: string
@@ -68,7 +68,9 @@ variables:
   scale_up_replicas: ${{ parameters.jmeter_slaves }}
   data_dir: $(repoName)/${{ parameters.data_dir }}
   data_dir_relative: ${{ parameters.data_dir }}
-  thresholds_file: $(repoName)/${{ parameters.thresholds_file }}
+  crux_file: $(repoName)/path/to/jmeter/config/crux.properties
+  thresholds_file: $(repoName)/path/to/jmeter/config/thresholds.properties
+  workbooks_file: $(repoName)/path/to/jmeter/config/workbooks.properties
   jmeter_args: ${{ parameters.jmeter_args }}
   repoName: jmeter_simple_test
   cruxRepoName: crux
